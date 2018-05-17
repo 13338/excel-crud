@@ -19,4 +19,4 @@ Route::resource('worker', 'WorkerController');
 
 Route::get('/import', 'ImportExportController@import')->name('import');
 Route::post('/importation', 'ImportExportController@importation')->name('importation');
-Route::get('/export', 'ImportExportController@store')->name('export');
+Route::get('/export', 'ImportExportController@export')->name('export');
