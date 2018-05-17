@@ -36,7 +36,16 @@ class WorkerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'secondname' => 'required',
+            'firstname' => 'required',
+            'middlename' => 'required',
+            'birth_year' => 'required',
+            'position' => 'required',
+            'salary' => 'required',
+        ]);
+        $id = Worker::create($request->all());
+        return redirect()->route('worker.show', ['worker' => $id]);
     }
 
     /**
@@ -47,7 +56,7 @@ class WorkerController extends Controller
      */
     public function show(Worker $worker)
     {
-        //
+        return view('worker.show', compact('worker'));
     }
 
     /**
