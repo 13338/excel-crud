@@ -13,10 +13,10 @@
     <label>ФИО</label>
     <div class="form-row">
       <div class="col-sm mb-3">
-        <input type="text" class="form-control" name="secondname" placeholder="Имя">
+        <input type="text" class="form-control" name="secondname" placeholder="Фамилия">
       </div>
       <div class="col mb-3">
-        <input type="text" class="form-control" name="firstname" placeholder="Фамилия">
+        <input type="text" class="form-control" name="firstname" placeholder="Имя">
       </div>
       <div class="col-sm mb-3">
         <input type="text" class="form-control" name="middlename" placeholder="Отчество">
