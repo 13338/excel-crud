@@ -42,7 +42,7 @@
         <td>{{ $worker->salary }}</td>
         <td><a href="{{ route('worker.show', ['worker' => $worker->id]) }}">Посмотреть</a></td>
         <td><a href="{{ route('worker.edit', ['worker' => $worker->id]) }}">Редактировать</a></td>
-        <td>{{-- <a href="{{ route('worker.destroy', ['worker' => $worker->id]) }}">Удалить</a> --}}</td>
+        <td><a class="text-danger" onclick="rm(this);" data-url="{{ route('worker.destroy', ['id' => $worker->id]) }}">Удалить</a></td>
       </tr>
     @endforeach
     </tbody>

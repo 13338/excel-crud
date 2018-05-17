@@ -27,7 +27,7 @@
     </table>
     <div class="card-body">
       <a href="{{ route('worker.edit', ['worker' => $worker->id]) }}" class="card-link">Редактировать</a>
-      <a href="{{ route('worker.destroy', ['worker' => $worker->id]) }}" class="card-link">Удалить</a>
+      <a onclick="rm(this);" data-url="{{ route('worker.destroy', ['id' => $worker->id]) }}" class="card-link text-danger">Удалить</a>
     </div>
   </div>
 </div>

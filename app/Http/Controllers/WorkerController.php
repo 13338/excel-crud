@@ -91,6 +91,6 @@ class WorkerController extends Controller
      */
     public function destroy(Worker $worker)
     {
-        //
+        $worker->delete();
     }
 }
