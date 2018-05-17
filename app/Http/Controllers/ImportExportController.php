@@ -13,7 +13,7 @@ class ImportExportController extends Controller
      */
     public function import()
     {
-        //
+        return view('import');
     }
 
     /**
