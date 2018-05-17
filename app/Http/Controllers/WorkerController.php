@@ -79,7 +79,8 @@ class WorkerController extends Controller
      */
     public function update(Request $request, Worker $worker)
     {
-        //
+        $worker->update($request->all());
+        return redirect()->route('worker.show', ['worker' => $worker->id]);
     }
 
     /**
