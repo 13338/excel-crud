@@ -67,7 +67,7 @@ class WorkerController extends Controller
      */
     public function edit(Worker $worker)
     {
-        //
+        return view('worker.edit', compact('worker'));
     }
 
     /**
