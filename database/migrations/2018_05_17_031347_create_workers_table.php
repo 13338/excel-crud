@@ -20,7 +20,7 @@ class CreateWorkersTable extends Migration
             $table->string('middlename');
             $table->year('birth_year');
             $table->string('position');
-            $table->integer('salary');
+            $table->string('salary');
             $table->timestamps();
         });
     }
