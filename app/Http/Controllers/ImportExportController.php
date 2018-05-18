@@ -24,7 +24,17 @@ class ImportExportController extends Controller
      */
     public function importation(Request $request)
     {
-        //
+        $workers = (new FastExcel)->import($request->file('file')->getPathName(), function ($line) {
+            return Worker::create([
+                'secondname' => $line['Фамимлия'],
+                'firstname' => $line['Имя'],
+                'middlename' => $line['Отчество'],
+                'birth_year' => $line['Год. рождения'],
+                'position' => $line['Должность'],
+                'salary' => $line['Зп в год.']
+            ]);
+        });
+        return redirect()->route('worker.index');
     }
 
     /**
