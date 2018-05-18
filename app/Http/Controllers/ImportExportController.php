@@ -44,7 +44,17 @@ class ImportExportController extends Controller
      */
     public function export()
     {
-        //
+        $workers = Worker::all();
+        return (new FastExcel($workers))->download('workers-'.\Carbon\Carbon::now()->format('d-m-Y').'.xlsx', function ($worker) {
+            return [
+                'Фамимлия' => $worker->secondname,
+                'Имя' => $worker->firstname,
+                'Отчество' => $worker->middlename,
+                'Год. рождения' => $worker->birth_year,
+                'Должность' => $worker->position,
+                'Зп в год.' => $worker->salary,
+            ];
+        });
     }
 
 }
