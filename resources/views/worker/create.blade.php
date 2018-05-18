@@ -34,12 +34,7 @@
       </div>
       <div class="form-group col-sm mb-3">
         <label>Зп в год.</label>
-        <div class="input-group">
-          <input type="number" class="form-control" name="salary" min="0" step="1" placeholder="Зп в год.">
-          <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2">грн</span>
-          </div>
-        </div>
+        <input type="text" class="form-control" name="salary" placeholder="Зп в год.">
       </div>
     </div>
     <button type="submit" class="btn btn-success mb-3">Создать</button>
